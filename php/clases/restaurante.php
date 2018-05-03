@@ -110,32 +110,7 @@ class restaurante
 
 }
 
-	public function loginRestaurante($usuario,$contra)
-		{
-			// verificamos que los datos esten cayendo aqui
-			echo "<pre>";
-			echo $usuario."<br>";
-			echo $contraseña."<br>";
-			echo "</pre>";
-
-			
-
-			$con=$this->conectar();
-			$sql = "select usuario, pass from usuario where usuario='".$user."' and pass = '".$pass."';";
-
-
-			$info= $con->query($sql);
-			if ($info->num_rows>0) {
-				$data=$info->fetch_assoc();
-
-				session_start();
-
-				$_SESSION['USUARIO']=$data['usuario'];
-				header("Location: ../Restaurante/dashboardRestaurante.php");
-			}else{
-				header("Location: ../../index.html");
-			}		
-		}
+	
 
 
  ?>

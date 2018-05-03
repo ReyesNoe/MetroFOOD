@@ -1,7 +1,6 @@
 <?php 
- 
- require_once '../BD/conexion.php';
 
+ require_once '../BD/conexion.php';
 
  class verificasionTipoUsuario extends conexion
  {
@@ -41,37 +40,44 @@
         $user=$a;
         $contra=$b;
 
-          echo $user;
-          echo $contra;
-           
             $con = $this->conectar();
 
-            $sql = "select idTipoUsuario from usuario where usuario='".$user."' and pass= '".$contra."'";
-
+              $sql = "select usuario as usuario, idTipoUsuario as tipo FROM usuario 
+                    WHERE estadoUsuario=1 AND usuario='".$user."' AND pass ='".$contra."'";
 
            $tipoUsuario = $con->query($sql);
 
+              if ($tipoUsuario->num_rows>0) {
+                $data=$tipoUsuario->fetch_assoc();
 
+                session_start();
+                $_SESSION['TIPO']=$data['tipo'];
+                $_SESSION['USUARIO']=$data['usuario'];
 
-                if ($tipoUsuario=='1') {
+              }else{
+                header("Location: login/login.php");
+              }
 
-                   return 1;
-                   echo "uno";
+              echo "si es uno es admin entonces: ".$_SESSION['TIPO'];
 
-                }else if($tipoUsuario=='2'){
+                if ($_SESSION['TIPO']=='1') {
 
-                   return 2;
-                   echo "dos";
+                    header("location: administrador/dashboardAdministrador.php");
 
-                }else if($tipoUsuario=='3'){
+                }else if($_SESSION['TIPO']=='2'){
+
+                    header("location: cliente/DashBoardCliente.php");
+                   
+                }else if($_SESSION['TIPO']=='3'){
                       
-                    return 3;
-                    echo "tress";
+                    header("location: Restaurante/dashboardRestaurante.php");
+                    
+                }else if($_SESSION['TIPO']=='4'){
 
-                }else if($tipoUsuario=='4'){
-
-                    return 4;
-                    echo "cinco";
+                    header("location: repartidor/dashboardRepartidor.php");
+                    
+                }else{
+                  header("location: login/login.php ");
                 }         
           } 
 
@@ -90,39 +96,16 @@ if(isset($_POST["login"]))
 
 
      $verifi = new verificasionTipoUsuario();
-     $tipo= $verifi->verificasionTipo($usuario,$pass);
-
-     if($tipo==1){
-
-        $objLoguear= new administrador();
-        $objLoguear->loginAdmin($usuario,$pass);
-
-     }else if($tipo==2){
-
-         $objLoguear= new cliente();
-         $objLoguear->loginCliente($usuario,$pass);
-
-     }else if($tipo==3){
-
-         $objLoguear= new restaurante();
-         $objLoguear->loginRestaurante($usuario,$pass);
-      
-     }else if($tipo==4){
-      
-         $objLoguear= new repartidor();
-         $objLoguear->loginRepartidor($usuario,$pass);
-     }
-
-     
+     $verifi->verificasionTipo($usuario,$pass);    
 }
   else{
-  header("Location: ../html/login.html");
+  header("Location: login/login.php");
       die();
     }
 
 
 }else{
-  header("Location: ../html/login.html");
+  header("Location: login/login.php");
       die();
 }
 
