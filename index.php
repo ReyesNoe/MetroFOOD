@@ -4,17 +4,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <meta name="description" content="">
-    <meta name="author" content="">  
-    <script  src="vendor/bootstrap/jquery/jquery.js"></script>
-    <script src="vendor/js/bootstrap.js"></script>
+    <link href="pluggins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script  src="pluggins/bootstrap/jquery/jquery.js"></script>
+    <script src="pluggins/js/bootstrap.js"></script>
 
     <title>MetroFOOD</title>
     
 
     <!-- Custom styles for this template -->
-    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="pluggins/bootstrap/design/heroic-features.css" rel="stylesheet">
 
   </head>
 
@@ -41,8 +39,8 @@
                     <a class="nav-link" href="#">Contactanos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="php/login/login.php">&nbsp;&nbsp;Iniciar Sesion &nbsp;
-                      <img src="../../Investigacion Itca/Miapp/jquery/images/icons-png/user-white.png"> &nbsp;</a>
+                    <a class="nav-link" href="view/login/login.php">&nbsp;&nbsp;Iniciar Sesion &nbsp;
+                      <img src="imagenes/iconos/shop-white.png"> &nbsp;</a>
                   </li> 
                 </ul>
               </div>
@@ -54,7 +52,7 @@
 
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4">
-        <h1 class="display-3"> <img src="img/moto.png" width="100px" height="100px">  MetroFood</h1>
+        <h1 class="display-3"> <img src="imagenes/iconos/moto.png" width="100px" height="100px">  MetroFood</h1>
         <p class="lead">Bienvenido a la pagina en donde podras realizar tus pedidos y asi disfrutar de los mejores productos en pocos minutos.</a>
       </header>
 
@@ -192,31 +190,31 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100" src="imagenes/1.jpg" alt="First slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/1.jpg" alt="First slide" style="width:1200px; height: 500px;">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="imagenes/2.jpg" alt="Second slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/2.jpg" alt="Second slide" style="width:1200px; height: 500px;">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="imagenes/3.jpg" alt="Forth slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/3.jpg" alt="Forth slide" style="width:1200px; height: 500px;">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="imagenes/4.jpg" alt="Fifth slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/4.jpg" alt="Fifth slide" style="width:1200px; height: 500px;">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="imagenes/5.png" alt="Sixth slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/5.png" alt="Sixth slide" style="width:1200px; height: 500px;">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="imagenes/6.jpg" alt="Seventh slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/6.jpg" alt="Seventh slide" style="width:1200px; height: 500px;">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="imagenes/7.jpg" alt="Eighth slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/7.jpg" alt="Eighth slide" style="width:1200px; height: 500px;">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="imagenes/8.jpg" alt="Nineth slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/8.jpg" alt="Nineth slide" style="width:1200px; height: 500px;">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="imagenes/9.jpg" alt="Tenth slide" style="width:1200px; height: 500px;">
+                    <img class="d-block w-100" src="imagenes/carousellindex/9.jpg" alt="Tenth slide" style="width:1200px; height: 500px;">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

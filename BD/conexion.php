@@ -10,25 +10,29 @@
 
 	public function __construct()
 	{
-		
-		/*$this->host='localhost';
-		$this->user='root';
-		$this->password='Itca123!';
-		$this->database='metrofooddb';	*/
-	}
+		$data=require_once'../app/config.php';
 
+		$this->host=$data['host'];
+		$this->user=$data['user'];
+		$this->password=$data['pass'];
+		$this->database=$data['db'];	
+	}
+	conectar();
+	
 	public function conectar()
 	{
-		//$con= new mysqli($this->host, $this->user,$this->password, $this->database);
+		$con= new mysqli($this->host, $this->user,$this->password, $this->database);
 
-		$con= new mysqli('localhost', 'root', '' , 'metrofooddb');
 		if ($con->connect_errno) {
 			echo "Error en la conexion";
 			die();
 		}
 		echo "conectado";
+		die();
 		return $con;
 	}
+
+
 }
 
  ?>

@@ -14,11 +14,11 @@
         <div class="card card-container form-column col-md-3 col-sm-3 col-xs-3" >
            
 
-            <img id="profile-img" class="profile-img-card" src="../../img/moto.png" />
+            <img id="profile-img" class="profile-img-card" src="../../imagenes/iconos/moto.png" />
 
             <div class="content-form">
                 <h1>¿Que Esperas? <br> <h3>Registrate y Ordena<h3></h1>
-            <h5> ¿Ya tienes una Cuenta? <a href="index.php">Inicia Sesion</a></h5>
+            <h5> ¿Ya tienes una Cuenta? <a href="../login/login.php">Inicia Sesion</a></h5>
            
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin" method="POST" action="validacion.php">

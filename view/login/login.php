@@ -15,11 +15,11 @@
         <div class="card card-container form-column col-md-3 col-sm-3 col-xs-3" >
            
 
-            <img id="profile-img" class="profile-img-card" src="../../img/moto.png" />
+            <img id="profile-img" class="profile-img-card" src="../../imagenes/iconos/moto.png" />
 
             <div class="content-form">
                 <h1>Inicia Sesión</h1>
-            <h4>¿METROFOOT? <a href="../cliente/registrarse.php">Regístrate</a></h4>
+            <h4>¿METROFOOD? <a href="../cliente/registrarse.php">Regístrate</a></h4>
            
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin" method="POST" action="../verificacionTipoUsuario.php">
@@ -31,7 +31,7 @@
                         <input type="checkbox" value="remember-me" name="recordar"> Recordarme
                     </label>
                 </div>
-                <input class="btn btn-lg btn-primary btn-block btn-signin" type="submit" name="login">Iniciar Sesion</input>
+                <input class="btn btn-lg btn-primary btn-block btn-signin" type="submit" name="login" value="Iniciar Sesion"></input>
             </form><!-- /form -->
             <a href="#" class="forgot-password">
                 Olvidaste la contraseña?
