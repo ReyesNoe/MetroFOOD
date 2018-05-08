@@ -1,9 +1,6 @@
 <?php 
 
-	/**
-	* 
-	*/
-	class usuario
+	class Usuario extends Conexion
 	{
 		protected $idUsuario;
 		protected $usuario;
@@ -12,15 +9,16 @@
 		protected $estadoUsuario;
 		protected $idTipoEstado;
 
-		function __construct(argument)
+		function __construct()
 		{
-			
+			parent::__construct();
 		}
 
 		public function getIdUsuario(){
 
-			return $this->idUsuario
+			return $this->idUsuario;
 		}
+
 		public function setIdUsuario($idUsuario){
 			$this->idUsuario=$idUsuario;
 		}
@@ -52,8 +50,29 @@
 		public function getIdTipoEstado(){
 			return $this->idTipoEstado;
 		}
-		public function setIdUsuario($idTipoEstado){
+		public function setIdTipoEstado($idTipoEstado){
 			$this->idTipoEstado=$idTipoEstado;
 		}
+
+		public function encriptar($var){
+			$newPass = sha1(123);
+
+			echo $newPass;
+			return $newPass;
+		}
+
+		public function logear($user, $pass){
+			$con = $this.conectar;
+			die();
+			$sql = "select usuario as usuario, idTipoUsuario as rol from usuario where usuario = '".$user."' && pass='".$pass."' && estadoUsuario ='1'";
+			$info =$con->qwery($sql);
+			if ($info>$con->num_rows()) {
+
+				$data = $info->fetch_assoc;
+
+			}
+
+		}
+
 	}
  ?>

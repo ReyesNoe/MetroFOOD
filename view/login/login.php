@@ -22,7 +22,7 @@
             <h4>¿METROFOOD? <a href="../cliente/registrarse.php">Regístrate</a></h4>
            
             <p id="profile-name" class="profile-name-card"></p>
-            <form class="form-signin" method="POST" action="../verificacionTipoUsuario.php">
+            <form class="form-signin" method="POST" action="../../controller/UsuarioController.php">
                 <span id="reauth-user" class="reauth-user"></span>
                 <input type="text" name="user" class="form-control" placeholder="Usuario" value="" required autofocus>
                 <input type="password" name="pass" class="form-control" placeholder="Password" value="" required>

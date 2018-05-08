@@ -1,6 +1,7 @@
 <?php 
+class
 	
-	class Conexion
+    class Conexion
 	
 {
 	private $host;
@@ -17,8 +18,7 @@
 		$this->password=$data['pass'];
 		$this->database=$data['db'];	
 	}
-	conectar();
-	
+
 	public function conectar()
 	{
 		$con= new mysqli($this->host, $this->user,$this->password, $this->database);
@@ -28,7 +28,6 @@
 			die();
 		}
 		echo "conectado";
-		die();
 		return $con;
 	}
 
